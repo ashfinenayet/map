@@ -9,7 +9,7 @@ results = []
 df = pd.read_csv('urbanization-census-tract.csv')
 lat = df['lat_tract'].astype(float)
 lon = df['long_tract'].astype(float)
-for i in track(range(1, 2)): #iterate each row for API
+for i in track(range(0, len(df))): #iterate each row for API
     
     row = df.iloc[i]
 # Encode parameters
