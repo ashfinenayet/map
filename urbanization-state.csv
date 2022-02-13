@@ -1,56 +1,51 @@
-state, code, urbanindex
-Alabama,AL, 9.605935
-Alaska, AK, 8.735964
-Arizona,AZ, 11.29971
-Arkansas,AK, 9.259444
-California,CA, 12.19028
-Colorado,CO, 11.15445
-Connecticut,CT, 11.40968
-Delaware,DE, 11.00999
-District of Columbia, DC,13.44057
-Florida,FL, 11.46484
-Georgia,GA, 10.55233
-Guam,GU, 11.08593
-Hawaii,HI, 11.08621
-Idaho,ID, 9.593634
-Illinois,IL, 11.62372
-Indiana,IN, 10.4105
-Iowa,IA, 9.593525
-Kansas,KS, 10.12044
-Kentucky,KY, 9.789536
-Louisiana, LA, 10.17518
-Maine,ME, 9.037091
-Maryland, MD, 11.71105
-Massachusetts,MA,11.83973
-Michigan,MI,10.80559
-Minnesota,MN,10.45684
-Mississippi,MS,8.910859
-Missouri,MO,10.20212
-Montana,MT,8.470226
-Nebraska,NE,10.19912
-Nevada,NV,11.76972
-New Hampshire,NH,9.917139
-New Jersey,NJ,12.23565
-New Mexico,NM,9.896993
-New York,NY,12.55857
-North Carolina,NC,10.32481
-North Dakota,ND,9.054678
-Northern Marianas,MP,11.08593
-Ohio,OH,10.87687
-Oklahoma,OK,9.93928
-Oregon,OR,10.71233
-Pennsylvania,PA,11.14623
-Puerto Rico,PR,11.57168
-Rhode Island,RI,11.72124
-South Carolina,SC,10.11142
-South Dakota,SD,8.728642
-Tennessee,TN,10.19729
-Texas,TX,11.17488
-Utah,UT,10.96281
-Vermont,VT,8.843222
-Virgin Islands,VI,11.08593
-Virginia,VA,10.90625
-Washington,WA,11.11933
-West Virginia,WV,9.111112
-Wisconsin,WI,10.19131
-Wyoming,WY,8.256294
+state          ,ab ,urbanindex
+Alabama        ,AL ,9.605935
+Alaska         ,AK ,8.735964
+Arizona        ,AZ ,11.29971
+Arkansas       ,AR ,9.259444
+California     ,CA ,12.19028
+Colorado       ,CO ,11.15445
+Connecticut    ,CT ,11.40968
+Delaware       ,DE ,11.00999
+Florida        ,FL ,11.46484
+Georgia        ,GA ,10.55233
+Hawaii         ,HI ,11.08621
+Idaho          ,ID ,9.593634
+Illinois       ,IL ,11.62372
+Indiana        ,IN ,10.4105
+Iowa           ,IA ,9.593525
+Kansas         ,KS ,10.12044
+Kentucky       ,KY ,9.789536
+Louisiana      ,LA ,10.17518
+Maine          ,ME ,9.037091
+Maryland       ,MD ,11.71105
+Massachusetts  ,MA ,11.83973
+Michigan       ,MI ,10.80559
+Minnesota      ,MN ,10.45684
+Mississippi    ,MS ,8.910859
+Missouri       ,MO ,10.20212
+Montana        ,MT ,8.470226
+Nebraska       ,NE ,10.19912
+Nevada         ,NV ,11.76972
+New Hampshire  ,NH ,9.917139
+New Jersey     ,NJ ,12.23565
+New Mexico     ,NM ,9.896993
+New York       ,NY ,12.55857
+North Carolina ,NC ,10.32481
+North Dakota   ,ND ,9.054678
+Ohio           ,OH ,10.87687
+Oklahoma       ,OK ,9.93928
+Oregon         ,OR ,10.71233
+Pennsylvania   ,PA ,11.14623
+Rhode Island   ,RI ,11.72124
+South Carolina ,SC ,10.11142
+South Dakota   ,SD ,8.728642
+Tennessee      ,TN ,10.19729
+Texas          ,TX ,11.17488
+Utah           ,UT ,10.96281
+Vermont        ,VT ,8.843222
+Virginia       ,VA ,10.90625
+Washington     ,WA ,11.11933
+West Virginia  ,WV ,9.111112
+Wisconsin      ,WI ,10.19131
+Wyoming        ,WY ,8.256294

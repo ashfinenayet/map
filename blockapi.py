@@ -1,19 +1,34 @@
+import numpy as np
 import urllib
 import json
 import requests
 import urllib.request
 import pandas as pd
-
+from rich.progress import track 
+results = []
 df = pd.read_csv('urbanization-census-tract.csv')
-latitude = df['lat_tract']
-longitude = df['long_tract']
+lat = df['lat_tract'].astype(float)
+lon = df['long_tract'].astype(float)
+for i in track(range(1, 2)): #iterate each row for API
+    
+    row = df.iloc[i]
+# Encode parameters
+    params = urllib.parse.urlencode(
+    {'latitude': row['lat_tract'], 'longitude': row['long_tract'], 'format': 'json'})
+    # Contruct request URL
+    url = 'https://geo.fcc.gov/api/census/block/find?' + params
 
-with urllib.request.urlopen("https://geo.fcc.gov/api/census/block/find?latitude=32.47718&longitude=-86.49007&format=json") as url:
-    data = json.loads(url.read().decode())
-    print(data)
+# Get response from API
+    response = requests.get(url)
 
-print(json.dumps(data, indent=4, sort_keys=True))
+    # Parse json in response
+    data = response.json()
+    results.append(data['County']['FIPS'])
+    breakpoint()
 
-print(data['results'][0]['state_fips'])
-print(data['results'][0]['county_fips'])
-print(data['results'][0]['county_name'])
+# Print FIPS code
+
+
+df['FIPS'] = np.array(data)
+
+df.to_csv('urbanization-census-tract-updated', sep='\t')
