@@ -17,14 +17,15 @@ df2['ab'] = df2['ab'].apply(str.strip)
 df2['urbanindex'] = df2['urbanindex'].astype(float)
 
 countymap = px.choropleth_mapbox(df, title='most urban counties',  template='plotly_dark', geojson=counties, locations='FIPS', color='urbanindex',
-                           color_continuous_scale="Viridis",
-                           range_color=(0, 14),
-                           mapbox_style="carto-darkmatter",
-                           zoom=3, center={"lat": 37.0902, "lon": -95.7129},
-                           opacity=0.5,
-                           hover_data=['total_pop'],
-                           labels={'urbanindex': 'urban index', 'total_pop': 'total population'}
-                           )
+                                 color_continuous_scale="Viridis",
+                                 range_color=(0, 14),
+                                 mapbox_style="carto-darkmatter",
+                                 zoom=3, center={"lat": 37.0902, "lon": -95.7129},
+                                 opacity=0.5,
+                                 hover_data=['total_pop'],
+                                 labels={'urbanindex': 'urban index',
+                                         'total_pop': 'total population'}
+                                 )
 countymap.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
 
@@ -40,27 +41,27 @@ statemap = go.Figure(data=go.Choropleth(
 ))
 
 statemap.update_layout(
-    
+
 
 
     geo=dict(
-        bgcolor= 'rgba(0,0,0,0)', lakecolor='#000000',
-                                          landcolor='rgba(51,17,0,0.2)',
-                                          subunitcolor='black',
+        bgcolor='rgba(0,0,0,0)', lakecolor='#000000',
+        landcolor='rgba(51,17,0,0.2)',
+        subunitcolor='black',
         scope='usa',
         projection=go.layout.geo.Projection(type='albers usa'),
         showlakes=True,  # lakes
-        ),
-        title_text='Which States are the Most Urban?',
-        font = {"size": 9, "color":"White"},
-        titlefont = {"size": 15, "color":"White"},
-        margin={"r": 0, "t": 40, "l": 0, "b": 0},
-        paper_bgcolor='#000000',
-        plot_bgcolor='#000000',
+    ),
+    title_text='Which States are the Most Urban?',
+    font={"size": 9, "color": "White"},
+    titlefont={"size": 15, "color": "White"},
+    margin={"r": 0, "t": 40, "l": 0, "b": 0},
+    paper_bgcolor='#000000',
+    plot_bgcolor='#000000',
 ),
-app=dash.Dash(__name__)
-figures=["County Map", "State Map"]
-app.layout=html.Div(
+app = dash.Dash(__name__)
+figures = ["County Map", "State Map"]
+app.layout = html.Div(
     style={"backgroundColor": colors["background"]},
     children=[
         html.H1(
@@ -84,14 +85,11 @@ app.layout=html.Div(
             value=figures[0],
             searchable=False,
             clearable=False,
-            style={'display': 'inline-block','width': '40%'}
+            style={'display': 'inline-block', 'width': '40%'}
         ),
 
     ],
 )
-
-
-
 
 
 @ app.callback(Output("plot", "figure"), [Input("variables", "value")])
@@ -102,6 +100,8 @@ def update_graph(fig_name):
 
     if fig_name == "County Map":
         return countymap
+
+
 # Turn off reloader if inside Jupyter
 if __name__ == '__main__':
     app.run_server(debug=True, use_reloader=False)
